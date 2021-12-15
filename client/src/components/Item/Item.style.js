@@ -4,6 +4,7 @@ export const Container = tw.div`
 w-[106px]
 h-[123px]
 bg-[#04395E]
+hover:bg-blue-600 transition duration-100 hover:scale-110
 rounded-md
 mt-[17px]
 ml-[12px]

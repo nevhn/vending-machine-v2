@@ -1,13 +1,17 @@
 import tw from "tailwind-styled-components";
+import { ReactComponent as DownArrowsIcon } from "../../assets/down-arrows.svg";
 
-/*TODO:
-change styled components names, right now they are confusing 
-*/
+export const DownArrowsSvg = tw(DownArrowsIcon)`
+w-6
+h-6
+text-blue-400
+`;
+
 export const Container = tw.div`
 grid
 grid-cols-2
 `;
-export const VendingMachineSection = tw.div`
+export const VendingMachineDiv = tw.div`
 grid
 bg-[#F4F4F4]
 w-[533px]
@@ -20,7 +24,7 @@ shadow-lg
 
 // grid-co
 // grid-r
-export const OutlineDiv = tw.div`
+export const InnerDiv = tw.div`
 grid
 grid-cols-4
 bg-white
@@ -33,17 +37,18 @@ gap-y-3
 
 export const TrayDiv = tw.div`
 flex
+bg-[#E8E8E8]
 justify-center
 items-center
-bg-[#E8E8E8]
 h-[115px]
-mt[14px]
+mt-[11px]
 mx-[100px]
+drop-shadow-sm
 `;
 // mx-[35px]
 
 export const CustomerInputSection = tw.div`
-mt-[370px]
+md:ml-[180px] lg:mt-[370px]
 
 `;
 

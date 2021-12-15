@@ -16,6 +16,9 @@ export const RightDiv = tw.div``;
 export const HeaderSpan = tw.span`
 font-semibold
 text-xl 
+hover:text-[#04395E]
+cursor-pointer
+hover:transition duration-100
 `;
 
 export const StyledLink = tw(Link)`
@@ -31,5 +34,7 @@ border-black
  hover:to-black 
  hover:text-black
  hover:bg-white 
+ hover:transition duration-90
+ hover:scale-105
  mt-4
 `;

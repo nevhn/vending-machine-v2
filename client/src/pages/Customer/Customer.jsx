@@ -5,8 +5,8 @@ import * as S from "./Customer.style";
 export const Customer = () => {
   return (
     <S.Container>
-      <S.VendingMachineSection>
-        <S.OutlineDiv>
+      <S.VendingMachineDiv>
+        <S.InnerDiv>
           <Item />
           <Item />
           <Item />
@@ -31,9 +31,11 @@ export const Customer = () => {
           <Item />
           <Item />
           <Item />
-        </S.OutlineDiv>
-        <S.TrayDiv>2</S.TrayDiv>
-      </S.VendingMachineSection>
+        </S.InnerDiv>
+        <S.TrayDiv>
+          <S.DownArrowsSvg />
+        </S.TrayDiv>
+      </S.VendingMachineDiv>
       <S.CustomerInputSection>
         <S.MoneyTextDiv>
           <S.MoneyTextSpan>

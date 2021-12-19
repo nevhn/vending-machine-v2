@@ -21,7 +21,7 @@ cursor-pointer
 hover:transition duration-100
 `;
 
-export const StyledLink = tw(Link)`
+export const StyledLinkButton = tw(Link)`
 inline-block 
 text-sm 
 px-4 

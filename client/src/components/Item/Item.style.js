@@ -11,7 +11,6 @@ ml-[12px]
 `;
 
 export const ItemDiv = tw.div`
-
 pt-[10px]
 `;
 

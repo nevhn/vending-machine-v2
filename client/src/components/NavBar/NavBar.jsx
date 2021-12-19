@@ -1,14 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import * as S from "./NavBar.style";
+import { Link, useLocation } from "react-router-dom";
+
 export const NavBar = () => {
+  const location = useLocation();
+
   return (
     <S.Nav>
       <S.LeftDiv>
-        <S.HeaderSpan>Vending Machine</S.HeaderSpan>
+        <Link to="/">
+          <S.HeaderSpan>Vending Machine</S.HeaderSpan>
+        </Link>
       </S.LeftDiv>
       <S.RightDiv>
-        <S.StyledLink to="/">Vendor</S.StyledLink>
+        {location.pathname === "/" ? (
+          <S.StyledLinkButton to="/vendor">Vendor</S.StyledLinkButton>
+        ) : (
+          <S.StyledLinkButton to="/">Customer</S.StyledLinkButton>
+        )}
       </S.RightDiv>
     </S.Nav>
   );

@@ -7,6 +7,7 @@ export const Customer = () => {
     <S.Container>
       <S.VendingMachineDiv>
         <S.InnerDiv>
+          {/* replace with data from api ofc */}
           <Item />
           <Item />
           <Item />

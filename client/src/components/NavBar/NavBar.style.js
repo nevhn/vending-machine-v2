@@ -7,7 +7,7 @@ items-center
 justify-between
 flex-wrap
 p-6 
-shadow-lg
+shadow-md
 `;
 export const LeftDiv = tw.div``;
 

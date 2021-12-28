@@ -1,6 +1,6 @@
-import React from 'react'
-import { Heading } from '../../components/Heading/Heading'
-import * as S from './Vendor.style'
+import React from "react";
+import { Heading } from "../../components/Heading/Heading";
+import * as S from "./Vendor.style";
 export const Vendor = () => {
   return (
     <S.Container>
@@ -12,12 +12,12 @@ export const Vendor = () => {
           </S.OptionLink>
         </S.Option>
         <S.Option>
-          <S.OptionLink to="/add">
+          <S.OptionLink to="update">
             <S.TextSpan>Update an item</S.TextSpan>
           </S.OptionLink>
         </S.Option>
         <S.Option>
-          <S.OptionLink to="/add">
+          <S.OptionLink to="delete">
             <S.TextSpan>Delete an item</S.TextSpan>
           </S.OptionLink>
         </S.Option>
@@ -39,5 +39,5 @@ export const Vendor = () => {
       </S.ListOfOptionsDiv>
       <S.Divider />
     </S.Container>
-  )
-}
+  );
+};

@@ -1,11 +1,12 @@
-import React from 'react'
-import * as S from './Transactions.style'
-import { Heading } from '../../components/Heading/Heading'
+import React from "react";
+import * as S from "./Transactions.style";
+import { Heading } from "../../components/Heading/Heading";
+import { BackButton } from "../../components/BackButton/BackButton";
 
 export const Transactions = () => {
   return (
     <div>
-      <Heading prompt={'You currently seeing all transactions'} />
+      <Heading prompt={"You currently seeing all transactions"} />
       <S.TableDiv>
         <S.Table>
           <tr>
@@ -34,6 +35,7 @@ export const Transactions = () => {
           </tr>
         </S.Table>
       </S.TableDiv>
+      <BackButton />
     </div>
-  )
-}
+  );
+};

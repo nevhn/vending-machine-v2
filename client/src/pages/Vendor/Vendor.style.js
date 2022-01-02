@@ -2,10 +2,9 @@ import tw from 'tailwind-styled-components'
 import { Link } from 'react-router-dom'
 
 export const Container = tw.div`
-mt-[-100px]
+mt-[98px]
 grid
-grid-rows-2
-gap-y-0.5
+grid-rows-1
 justify-center
 items-center
 `
@@ -37,10 +36,12 @@ w-[175px]
 h-[68px]
 rounded-md
 shadow-md
-hover:bg-yellow-100
+hover:transition duration-100 ease-in-out 
+hover:bg-blue-400 
+hover:scale-110
 `
 
 export const Divider = tw.hr`
-mt-11
-text-blue-500
+text-gray-500
+mt-20
 `

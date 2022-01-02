@@ -13,7 +13,7 @@ export const AddItem = () => {
           <S.Input placeholder="Chocolate Chips" />
           <S.Label>Cost</S.Label>
           <S.Input placeholder="$0.75" />
-          <S.Label>quantity </S.Label>
+          <S.Label>Quantity </S.Label>
           <S.Input placeholder="10" />
           <S.ButtonDiv>
             <S.SubmitButton type="submit">Add item</S.SubmitButton>

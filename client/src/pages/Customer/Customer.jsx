@@ -1,6 +1,6 @@
-import React from "react";
-import { Item } from "../../components/Item/Item";
-import * as S from "./Customer.style";
+import React from 'react'
+import { Item } from '../../components/Item/Item'
+import * as S from './Customer.style'
 
 export const Customer = () => {
   return (
@@ -8,7 +8,6 @@ export const Customer = () => {
       <S.VendingMachineDiv>
         <S.InnerDiv>
           {/* replace with data from api ofc */}
-          <Item />
           <Item />
           <Item />
           <Item />
@@ -47,15 +46,18 @@ export const Customer = () => {
           </S.MoneyTextSpan>
         </S.MoneyTextDiv>
         <S.InputDiv>
-          <S.MoneyInput
-            type="number"
-            min="0.01"
-            max="10000.00"
-            step="0.01"
-            placeholder="insert money here"
-          ></S.MoneyInput>
+          <span>
+            $
+            <S.MoneyInput
+              type="number"
+              min="0.01"
+              max="10000.00"
+              step="0.01"
+              placeholder="insert money here"
+            />
+          </span>
         </S.InputDiv>
       </S.CustomerInputSection>
     </S.Container>
-  );
-};
+  )
+}

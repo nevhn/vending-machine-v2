@@ -1,5 +1,5 @@
-import * as S from "./Item.style";
-import React from "react";
+import * as S from './Item.style'
+import React from 'react'
 
 export const Item = () => {
   return (
@@ -10,5 +10,5 @@ export const Item = () => {
         <S.CostSpan>$1.00</S.CostSpan>
       </S.ItemDiv>
     </S.Container>
-  );
-};
+  )
+}

@@ -1,32 +1,21 @@
 import tw from "tailwind-styled-components";
-
 export const Container = tw.div``;
 export const TableDiv = tw.div`
-bg-[#F1F5F2]
 rounded-md
-shadow
-w-4/12
+min-w-[398px]
+border-b-2
+max-w-prose
 m-auto
 mt-11
+mb-9
+max-h-[360px]
+overflow-y-auto
 `;
-// text-align: center fixes align issue
 export const Table = tw.table`
 w-full
 text-center
 border-separate
 p-2
-mb-20
+mb-2
 
 `;
-
-// td{
-//     border-2
-//     p-2
-//     w-full
-//     text-indigo-200
-// }
-
-// th{
-//     text-blue-500
-//     bg-black;
-// }

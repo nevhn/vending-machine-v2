@@ -9,10 +9,7 @@ text-blue-400
 
 export const Container = tw.div`
  grid 
- md:bg-yellow-300 
  lg:grid-cols-2 
- lg:bg-pink-500
- xl:bg-blue-400
 `;
 export const VendingMachineDiv = tw.div`
 grid
@@ -86,7 +83,7 @@ md:ml-2
 text-[#64F58D]`;
 // export const ChangeSpan = tw.span`ml-2`;
 export const InputDiv = tw.div`
-sm:mx-auto
+mx-auto
 row-span-2
 md:mx-auto
 my-3

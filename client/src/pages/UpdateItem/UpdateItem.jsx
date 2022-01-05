@@ -29,6 +29,42 @@ export const UpdateItem = () => {
             <S.Th>1</S.Th>
             <S.Th>Pop-Tarts</S.Th>
           </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
+          <S.HeaderTr>
+            <S.Th>1</S.Th>
+            <S.Th>Pop-Tarts</S.Th>
+          </S.HeaderTr>
         </S.Table>
       </S.TableDiv>
       <S.InputDiv>

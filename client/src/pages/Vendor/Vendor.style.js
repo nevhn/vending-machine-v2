@@ -33,7 +33,8 @@ justify-center
 items-center
 text-center
 bg-[#C4C4C4]
-w-[175px]
+w-[163px]
+md:w-[175px]
 h-[68px]
 rounded-md
 shadow-md

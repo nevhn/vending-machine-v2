@@ -1,15 +1,13 @@
 import tw from "tailwind-styled-components";
 
 export const TableDiv = tw.div`
-bg-[#F1F5F2]
-rounded-md
-shadow
-w-96
+w-auto
+md:w-96
 m-auto
 mt-11
 mb-9
 pl-10
-max-h-[360px]
+max-h-[285px]
 overflow-y-auto
 `;
 
@@ -30,7 +28,7 @@ text-gray-400
 export const InputDiv = tw.div`
 w-2/12
 m-auto
-min-w-[375px]
+min-w-[342px]
 `;
 // min-w-fit
 export const Form = tw.div``;

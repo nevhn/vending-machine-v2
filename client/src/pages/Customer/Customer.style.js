@@ -8,18 +8,19 @@ text-blue-400
 `;
 
 export const Container = tw.div`
- grid 
- lg:grid-cols-2 
+grid 
+lg:grid-cols-2 
+overflow-x-hidden
 `;
 export const VendingMachineDiv = tw.div`
 grid
 bg-[#F4F4F4]
 w-[360px]
-h-[520px]
+h-[470px]
 m-auto
 mt-3
 rounded-md
-shadow-lg
+shadow-2xl
 md:w-[533px]
 md:h-[786px]
 md:m-auto
@@ -63,7 +64,7 @@ lg:h-28
 // mx-[35px]
 
 export const CustomerInputSection = tw.div`
-grid grid-rows-2 mt-6 lg:mt-[370px] xl:w-[297px]
+grid grid-rows-2 mt-6 lg:mt-[370px] xl:w-[297px] lg:ml-24
 
 `;
 
@@ -84,7 +85,6 @@ text-[#64F58D]`;
 // export const ChangeSpan = tw.span`ml-2`;
 export const InputDiv = tw.div`
 mx-auto
-row-span-2
 md:mx-auto
 my-3
 md:relative 

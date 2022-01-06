@@ -1,6 +1,6 @@
-import React from 'react'
-import { Item } from '../../components/Item/Item'
-import * as S from './Customer.style'
+import React from "react";
+import { Item } from "../../components/Item/Item";
+import * as S from "./Customer.style";
 
 export const Customer = () => {
   return (
@@ -59,5 +59,5 @@ export const Customer = () => {
         </S.InputDiv>
       </S.CustomerInputSection>
     </S.Container>
-  )
-}
+  );
+};

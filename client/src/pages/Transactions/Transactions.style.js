@@ -1,8 +1,7 @@
 import tw from "tailwind-styled-components";
 export const Container = tw.div``;
 export const TableDiv = tw.div`
-rounded-md
-min-w-[398px]
+min-w-auto
 border-b-2
 max-w-prose
 m-auto
@@ -15,7 +14,9 @@ export const Table = tw.table`
 w-full
 text-center
 border-separate
-p-2
+m-auto
 mb-2
-
+td:{
+    m-auto
+}
 `;

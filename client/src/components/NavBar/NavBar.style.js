@@ -36,4 +36,6 @@ border-black
  hover:bg-white 
  hover:transition duration-90
  hover:scale-105
+ active:transition duration-100
+ active:bg-green-500
 `;

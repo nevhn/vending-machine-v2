@@ -3,8 +3,12 @@ import { BackButton } from "../../components/BackButton/BackButton";
 import { Heading } from "../../components/Heading/Heading";
 import * as S from "../UpdateItem/UpdateItem.style";
 import { DeleteButton } from "./DeleteItem.style";
-
+import toast from "react-hot-toast";
 export const DeleteItem = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    toast("delete");
+  };
   return (
     <div>
       <Heading prompt={"You are currently deleting an item"} />
@@ -33,7 +37,11 @@ export const DeleteItem = () => {
         </S.Table>
       </S.TableDiv>
       <S.InputDiv>
-        <S.Form>
+        <S.Form
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
+        >
           <S.InputLabel>Delete item</S.InputLabel>
           <S.Input placeholder="id" type={"number"}></S.Input>
           <S.ButtonDiv>

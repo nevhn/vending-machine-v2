@@ -31,7 +31,7 @@ m-auto
 min-w-[342px]
 `;
 // min-w-fit
-export const Form = tw.div``;
+export const Form = tw.form``;
 export const InputLabel = tw.label`
 block
 mb-2

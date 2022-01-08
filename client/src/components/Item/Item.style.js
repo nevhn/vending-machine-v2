@@ -1,4 +1,4 @@
-import tw from 'tailwind-styled-components'
+import tw from "tailwind-styled-components";
 
 export const Container = tw.div`
 w-[106px]
@@ -9,20 +9,22 @@ rounded-md
 mt-[17px]
 ml-[12px]
 cursor-pointer
-`
-export const ItemDiv = tw.div`
+pointer-events-auto
+`;
+export const Div = tw.div`
+select-none
 pt-[10px]
-`
+`;
 
-export const AmountSpan = tw.span`
+export const Quantity = tw.span`
 block
 text-white
 text-center
-pb-[17px]
-`
-export const ItemSpan = tw(AmountSpan)``
-export const CostSpan = tw.span`
+pb-[5px]
+`;
+export const Description = tw(Quantity)``;
+export const Cost = tw.span`
 block
 text-[#64F58D]
 text-center
-`
+`;

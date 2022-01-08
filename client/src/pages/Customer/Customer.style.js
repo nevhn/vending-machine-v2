@@ -4,7 +4,7 @@ import { ReactComponent as DownArrowsIcon } from "../../assets/down-arrows.svg";
 export const DownArrowsSvg = tw(DownArrowsIcon)`
 w-6
 h-6
-text-blue-400
+text-gray-400
 `;
 
 export const Container = tw.div`
@@ -12,7 +12,7 @@ grid
 lg:grid-cols-2 
 overflow-x-hidden
 `;
-export const VendingMachineDiv = tw.div`
+export const VendingMachine = tw.div`
 grid
 bg-[#F4F4F4]
 w-[360px]
@@ -30,26 +30,27 @@ xl:ml-auto
 2xl:w-[533px]
 2xl:h-[786px]
 `;
-// lg:ml-[211px]
 
-export const InnerDiv = tw.div`
+export const Window = tw.div`
 grid
 grid-cols-3
+grid-rows-3
+gap-y-2
 bg-white
 h-[470px]
 overflow-y-auto
-gap-y-3
 pr-2
 md:mx-[7px]
 md:grid-cols-4
-md:mt-[37px]
+md:grid-rows-4
+md:mt-[13px]
 lg:mt-2
 md:w-[514px]
 md:h-[651px]
 2xl:mt-3
 `;
 
-export const TrayDiv = tw.div`
+export const PickupBox = tw.div`
 hidden
 md:mt-[11px]
 md:bg-[#E8E8E8]
@@ -68,18 +69,18 @@ grid grid-rows-2 mt-6 lg:mt-[370px] xl:w-[297px] lg:ml-24
 
 `;
 
-export const MoneyTextDiv = tw.div`
+export const Div = tw.div`
  mx-auto row-span-1 md:self-center
 `;
 
-export const MoneyTextSpan = tw.span`
+export const Span = tw.span`
 block
 font-bold
 text-2xl
 md:mb-[10px]
 `;
 
-export const MoneySpan = tw.span`
+export const Amount = tw.span`
 md:ml-2
 text-[#64F58D]`;
 // export const ChangeSpan = tw.span`ml-2`;
@@ -95,7 +96,7 @@ md:mb-3
 
 `;
 
-export const MoneyInput = tw.input`
+export const Input = tw.input`
 text-center
 py-3 
 placeholder-blueGray-300 

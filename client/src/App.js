@@ -9,11 +9,13 @@ import { Funds } from "./pages/Funds/Funds";
 import { Transactions } from "./pages/Transactions/Transactions";
 import { UpdateItem } from "./pages/UpdateItem/UpdateItem";
 import { Vendor } from "./pages/Vendor/Vendor";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <Toaster />
       <Routes>
         <Route path="/" element={<Customer />} />
         <Route path="vendor" element={<Vendor />} />

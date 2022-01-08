@@ -37,6 +37,8 @@ exports.purchaseItem = async (req, res) => {
   if (availableMoney <= 0) {
     throw new Error("out of order: out of money");
   }
+  /* checks to see if quantity equals to zero */
+  if (!itemObj.quantity) throw new Error("Item is out of stock");
   /*  not enough funds given */
   if (money < itemCost) {
     throw new Error("invalid amount");

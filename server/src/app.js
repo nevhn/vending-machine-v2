@@ -1,4 +1,4 @@
-// Rewriting https://github.com/ExhaustCs/vending-machine
+// A slightly more cleaner version of:  https://github.com/ExhaustCs/vending-machine
 
 console.clear();
 require("dotenv").config();

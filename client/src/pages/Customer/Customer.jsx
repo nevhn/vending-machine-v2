@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 import { Item } from "../../components/Item/Item";
 import * as S from "./Customer.style";
 export const Customer = () => {
-  /** TODO: Fetch items in a predictable order*/
   const [items, setItem] = useState([]);
   const [money, setMoney] = useState(0);
   const [change, setChange] = useState(0);

@@ -1,16 +1,10 @@
-/* TODO:
-
-[x] - Make back button a seprate component 
-``
-
-*/
-import tw from 'tailwind-styled-components'
-import { Link } from 'react-router-dom'
+import tw from "tailwind-styled-components";
+import { Link } from "react-router-dom";
 export const Div = tw.div`
 flex
 justify-center
 items-center
-`
+`;
 export const BackLink = tw(Link)`
 text-sm 
 px-4 
@@ -27,4 +21,4 @@ border-black
  hover:scale-105
  mt-4
 
-`
+`;

@@ -2,7 +2,7 @@ const db = require("../db/db");
 
 /**GET */
 exports.getItems = async (req, res) => {
-  const selectAllItemsQuery = await db.query("SELECT * FROM items");
+  const selectAllItemsQuery = await db.query("SELECT * FROM items ORDER BY id");
   res.json({
     status: "success",
     length: selectAllItemsQuery.rows.length,

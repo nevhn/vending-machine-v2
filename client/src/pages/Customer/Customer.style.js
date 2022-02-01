@@ -19,6 +19,7 @@ w-[360px]
 h-[470px]
 m-auto
 mt-3
+md:mb-20
 rounded-md
 shadow-2xl
 md:w-[533px]

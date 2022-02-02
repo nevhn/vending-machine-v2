@@ -25,6 +25,8 @@ export const AddItem = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (cost === "0" || quantity === "0")
+      return toast.error("value cannot be zero");
     const callFunction = addItem();
     toast.promise(
       callFunction,
@@ -53,19 +55,29 @@ export const AddItem = () => {
           <S.Input
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Chocolate Chips"
+            type="text"
             value={description}
+            required
           />
           <S.Label>Cost</S.Label>
           <S.Input
             onChange={(e) => setCost(e.target.value)}
+            type="number"
             placeholder="$0.75"
             value={cost}
+            max="10000.00"
+            min="0"
+            step="0.01"
+            required
           />
           <S.Label>Quantity </S.Label>
           <S.Input
             onChange={(e) => setQuantity(e.target.value)}
+            type="number"
             placeholder="10"
+            min="0"
             value={quantity}
+            required
           />
           <S.ButtonDiv>
             <S.SubmitButton type="submit">Add item</S.SubmitButton>

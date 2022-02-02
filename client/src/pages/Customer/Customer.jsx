@@ -80,6 +80,7 @@ export const Customer = () => {
               autoFocus
               type="number"
               max="10000.00"
+              min="0"
               step="0.01"
               placeholder="insert money here"
             />

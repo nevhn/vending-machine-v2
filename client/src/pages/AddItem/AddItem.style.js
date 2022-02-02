@@ -14,7 +14,6 @@ flex
 flex-col
 items-center
 p-16
-
 `;
 
 export const Input = tw.input`

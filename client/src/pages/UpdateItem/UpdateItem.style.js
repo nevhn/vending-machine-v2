@@ -2,11 +2,11 @@ import tw from "tailwind-styled-components";
 
 export const TableDiv = tw.div`
 w-auto
+pl-10
 md:w-96
 m-auto
 mt-11
 mb-9
-pl-10
 max-h-[285px]
 overflow-y-auto
 `;

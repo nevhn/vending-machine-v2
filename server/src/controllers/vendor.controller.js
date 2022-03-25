@@ -24,6 +24,9 @@ exports.getAvailableMoney = async (req, res) => {
 /** PUT */
 exports.updateItem = async (req, res) => {
   const { itemId } = req.params;
+  if (Object.keys(req.body).length === 0) {
+    throw new Error("empty body");
+  }
   let { description, cost, quantity } = req.body;
   const selectItemQuery = await db.query("SELECT * FROM items WHERE id = $1", [
     itemId,

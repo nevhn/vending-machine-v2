@@ -7,24 +7,37 @@ import toast from "react-hot-toast";
 
 export const UpdateItem = () => {
   /**TODO:
-   * Add description, cost, quantity input fields
+   [ * ] Add description, cost, quantity input fields
    * Fix padding and make it look decent for all breakpoints
-   * Finish adding functionality -> const [description, setDescription]
+   [ * ] Finish adding functionality -> const [description, setDescription]
+   3/24/22 - check for logic problems / test things like inputs
    */
   const [items, setItems] = useState([]);
   const [id, setId] = useState();
+  const [description, setDescription] = useState();
+  const [cost, setCost] = useState();
+  const [quantity, setQuantity] = useState();
+
+  const fetchItem = async () => {
+    const response = await axios.get("/customer/items");
+    console.log("items", response.data.response);
+    setItems(response.data.response);
+  };
+
   useEffect(() => {
-    const fetchItem = async () => {
-      const response = await axios.get("/customer/items");
-      console.log("items", response.data.response);
-      setItems(response.data.response);
-    };
     fetchItem();
   }, []);
+
   const updateItem = async (id) => {
     try {
-      const response = await axios.put(`/vendor/items/${id}`);
+      const body = {
+        description,
+        cost,
+        quantity,
+      };
+      const response = await axios.put(`/vendor/items/${id}`, body);
       console.log(response.data.response);
+      fetchItem();
     } catch (error) {
       console.error("err", error);
       return Promise.reject(error.response.data.response);
@@ -128,6 +141,26 @@ export const UpdateItem = () => {
             placeholder="id"
             type={"number"}
             min="0"
+          ></S.Input>
+          <S.InputLabel>Description</S.InputLabel>
+          <S.Input
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="description"
+            type="text"
+          ></S.Input>
+          <S.InputLabel>Cost</S.InputLabel>
+          <S.Input
+            onChange={(e) => setCost(e.target.value)}
+            placeholder="cost"
+            type="number"
+            min="0"
+          ></S.Input>
+          <S.InputLabel>Quantity</S.InputLabel>
+          <S.Input
+            onChange={(e) => setQuantity(e.target.value)}
+            placeholder="quantity"
+            type="number"
+            min="number"
           ></S.Input>
           <S.ButtonDiv>
             <S.UpdateButton type="submit">Update</S.UpdateButton>

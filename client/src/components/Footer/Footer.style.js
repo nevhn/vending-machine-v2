@@ -7,7 +7,7 @@ md:justify-end
 items-center
 mt-4
 p-4
-fixed
+${(p) => (p.$isUpdateItem ? "static" : "fixed")}
 bottom-0
 left-0
 w-full

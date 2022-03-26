@@ -29,9 +29,11 @@ export const InputDiv = tw.div`
 w-2/12
 m-auto
 min-w-[342px]
+mb-10
 `;
 // min-w-fit
-export const Form = tw.form``;
+export const Form = tw.form`
+`;
 export const InputLabel = tw.label`
 block
 mb-2
@@ -51,6 +53,7 @@ export const ButtonDiv = tw.div`
 flex
 justify-center
 items-center
+mt-6
 `;
 export const UpdateButton = tw.button`
 bg-yellow-400

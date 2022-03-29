@@ -5,7 +5,7 @@ import * as S from "./Footer.style";
 /*
 TODO: 
   [x] figure how to render styles
-  [] fix footer for other device sizes
+  [x] fix footer for other device sizes
 */
 export const Footer = () => {
   const [path, setPath] = useState();

@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { Heading } from "../../components/Heading/Heading";
 import * as S from "../UpdateItem/UpdateItem.style";
 import { DeleteButton } from "./DeleteItem.style";
 import toast from "react-hot-toast";
+import axios from axios
+/**
+ *
+ * TODO:
+ * Start integrating backend into component []
+ *
+ */
+const [items, setItems] = useState([])
+useEffect(() => {
+  const fetchItems = ()=> {
+    const response = await axios()
+
+  }
+  fetchItems()
+}, [])
 export const DeleteItem = () => {
   const handleSubmit = (e) => {
     e.preventDefault();

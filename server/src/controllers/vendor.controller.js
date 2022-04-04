@@ -77,8 +77,10 @@ exports.deleteItem = async (req, res) => {
     "DELETE FROM items where id = $1 RETURNING *",
     [itemId]
   );
+  console.log(deleteItemEntryQuery);
+  if (!deleteItemEntryQuery.rows[0]) throw new Error("Item already deleted");
   res.json({
     status: "success",
-    response: deleteItemEntryQuery.rows[0] || "already deleted",
+    response: deleteItemEntryQuery.rows[0],
   });
 };

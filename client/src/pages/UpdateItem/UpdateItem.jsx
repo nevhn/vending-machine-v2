@@ -18,14 +18,14 @@ export const UpdateItem = () => {
   const [cost, setCost] = useState();
   const [quantity, setQuantity] = useState();
 
-  const fetchItem = async () => {
+  const fetchItems = async () => {
     const response = await axios.get("/customer/items");
     console.log("items", response.data.response);
     setItems(response.data.response);
   };
 
   useEffect(() => {
-    fetchItem();
+    fetchItems();
   }, []);
 
   const updateItem = async (id) => {
@@ -37,7 +37,7 @@ export const UpdateItem = () => {
       };
       const response = await axios.put(`/vendor/items/${id}`, body);
       console.log(response.data.response);
-      fetchItem();
+      fetchItems();
     } catch (error) {
       console.error("err", error);
       return Promise.reject(error.response.data.response);

@@ -3,6 +3,11 @@ import * as S from "./Transactions.style";
 import { Heading } from "../../components/Heading/Heading";
 import { BackButton } from "../../components/BackButton/BackButton";
 
+/**
+ *
+ * TODO:
+ * Implement backend []
+ */
 export const Transactions = () => {
   return (
     <div>

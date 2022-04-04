@@ -3,26 +3,44 @@ import { BackButton } from "../../components/BackButton/BackButton";
 import { Heading } from "../../components/Heading/Heading";
 import * as S from "../UpdateItem/UpdateItem.style";
 import { DeleteButton } from "./DeleteItem.style";
-import toast from "react-hot-toast";
-import axios from axios
+import toast, { Toaster } from "react-hot-toast";
+import axios from "axios";
 /**
  *
  * TODO:
- * Start integrating backend into component []
+ * Start integrating backend into component [x]
  *
  */
-const [items, setItems] = useState([])
-useEffect(() => {
-  const fetchItems = ()=> {
-    const response = await axios()
-
-  }
-  fetchItems()
-}, [])
 export const DeleteItem = () => {
+  const [items, setItems] = useState([]);
+  const [id, setId] = useState();
+
+  const fetchItems = async () => {
+    const response = await axios.get("/customer/items");
+    setItems(response.data.response);
+  };
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const deleteItem = async (id) => {
+    try {
+      const response = await axios.delete(`/vendor/items/${id}`);
+      fetchItems();
+    } catch (error) {
+      console.error("err", error);
+      return Promise.reject(error.response.data.response);
+    }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast("delete");
+    const callFunction = deleteItem(id);
+    setId("");
+    toast.promise(callFunction, {
+      loading: "Loading",
+      success: "Item updated successfully",
+      error: (err) => `${err}`,
+    });
   };
   return (
     <div>
@@ -33,8 +51,13 @@ export const DeleteItem = () => {
             <S.Th>Id</S.Th>
             <S.Th>Item</S.Th>
           </S.Tr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
+          {items.map((item) => (
+            <S.HeaderTr>
+              <S.Th>{item.id}</S.Th>
+              <S.Th>{item.description}</S.Th>
+            </S.HeaderTr>
+          ))}
+          {/* <S.Th>1</S.Th>
             <S.Th>Pop-Tarts</S.Th>
           </S.HeaderTr>
           <S.HeaderTr>
@@ -47,8 +70,7 @@ export const DeleteItem = () => {
           </S.HeaderTr>
           <S.HeaderTr>
             <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
+            <S.Th>Pop-Tarts</S.Th> */}
         </S.Table>
       </S.TableDiv>
       <S.InputDiv>
@@ -58,9 +80,14 @@ export const DeleteItem = () => {
           }}
         >
           <S.InputLabel>Delete item</S.InputLabel>
-          <S.Input placeholder="id" type={"number"}></S.Input>
+          <S.Input
+            onChange={(e) => setId(e.target.value)}
+            placeholder="id"
+            type={"number"}
+            value={id}
+          ></S.Input>
           <S.ButtonDiv>
-            <DeleteButton>Delete</DeleteButton>
+            <DeleteButton type="submit">Delete</DeleteButton>
           </S.ButtonDiv>
         </S.Form>
         <BackButton />

@@ -10,6 +10,7 @@ import axios from "axios";
  *
  * TODO:
  * Input validation: prevent zero from being allowed
+ * erase this ; replace this with fetch items page
  */
 export const AddFunds = () => {
   const [total, setTotal] = useState();

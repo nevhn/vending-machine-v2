@@ -7,8 +7,8 @@ import axios from "axios";
  *
  * TODO:
  * Implement backend [x]
+ * Fix backend so that it doesn't add null values to transactions [x]
  * Fix styling []
- * Fix backend so that it doesn't add null values to transactions
  *
  */
 
@@ -23,16 +23,18 @@ export const Transactions = () => {
   }, []);
 
   return (
-    <div>
+    <S.Container>
       <Heading prompt={"You currently seeing all transactions"} />
       <S.TableDiv>
         <S.Table>
-          <tr>
-            <th>Item</th>
-            <th>Cost</th>
-            <th>Amount Inserted</th>
-            <th>Date of purchase</th>
-          </tr>
+          <S.THEAD>
+            <tr>
+              <th>Item</th>
+              <th>Cost</th>
+              <th>Purchased</th>
+              <th>Date of purchase</th>
+            </tr>
+          </S.THEAD>
           {transactions.map((transaction) => (
             <tr>
               <td>{transaction.description}</td>
@@ -62,6 +64,6 @@ export const Transactions = () => {
         </S.Table>
       </S.TableDiv>
       <BackButton />
-    </div>
+    </S.Container>
   );
 };

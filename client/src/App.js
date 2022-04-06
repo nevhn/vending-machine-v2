@@ -5,10 +5,10 @@ import { AddFunds } from "./pages/AddFunds/AddFunds";
 import { AddItem } from "./pages/AddItem/AddItem";
 import { Customer } from "./pages/Customer/Customer";
 import { DeleteItem } from "./pages/DeleteItem/DeleteItem";
-import { Funds } from "./pages/Funds/Funds";
 import { Transactions } from "./pages/Transactions/Transactions";
 import { UpdateItem } from "./pages/UpdateItem/UpdateItem";
 import { Vendor } from "./pages/Vendor/Vendor";
+import { Items } from "./pages/Items/Items";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
         <Route path="vendor/transactions" element={<Transactions />} />
         <Route path="vendor/update" element={<UpdateItem />} />
         <Route path="vendor/delete" element={<DeleteItem />} />
-        <Route path="vendor/funds" element={<Funds />} />
-        <Route path="vendor/addfunds" element={<AddFunds />} />
+        <Route path="vendor/funds" element={<AddFunds />} />
+        <Route path="vendor/items" element={<Items />} />
       </Routes>
       <Footer />
     </BrowserRouter>

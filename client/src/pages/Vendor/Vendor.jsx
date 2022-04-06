@@ -32,13 +32,13 @@ export const Vendor = () => {
             </S.OptionLink>
           </S.Option>
           <S.Option>
-            <S.OptionLink to="addfunds">
+            <S.OptionLink to="funds">
               <S.TextSpan>Add funds</S.TextSpan>
             </S.OptionLink>
           </S.Option>
           <S.Option>
-            <S.OptionLink to="funds">
-              <S.TextSpan>Get total funds</S.TextSpan>
+            <S.OptionLink to="items">
+              <S.TextSpan>Fetch items</S.TextSpan>
             </S.OptionLink>
           </S.Option>
         </S.ListOfOptionsDiv>

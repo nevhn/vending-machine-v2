@@ -48,6 +48,7 @@ exports.updateItem = async (req, res) => {
 
 exports.addFunds = async (req, res) => {
   const { total } = req.body;
+  if (!total) throw new Error("Value needs to be higher then zero");
   const updateFundsQuery = await db.query(
     "UPDATE available_money SET total = $1 RETURNING *",
     [total]

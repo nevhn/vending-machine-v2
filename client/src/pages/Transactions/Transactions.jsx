@@ -36,8 +36,8 @@ export const Transactions = () => {
           {transactions.map((transaction) => (
             <tr>
               <td>{transaction.description}</td>
-              <td>{transaction.amount_inserted}</td>
-              <td>{transaction.cost}</td>
+              <td>{`$${transaction.cost}`}</td>
+              <td>{`$${transaction.amount_inserted}`}</td>
               <td>{new Date(transaction.transaction_date).toLocaleString()}</td>
             </tr>
           ))}

@@ -1,7 +1,11 @@
-import React from 'react'
-import { Heading } from '../../components/Heading/Heading'
-import * as S from './Vendor.style'
+import React from "react";
+import { Heading } from "../../components/Heading/Heading";
+import * as S from "./Vendor.style";
 export const Vendor = () => {
+  /**
+   * TODO:
+   *  replace funds page with fetch all items page (rearrange everything) []
+   */
   return (
     <div>
       <Heading prompt="You currently on the vendor page." />
@@ -41,5 +45,5 @@ export const Vendor = () => {
         <S.Divider />
       </S.Container>
     </div>
-  )
-}
+  );
+};

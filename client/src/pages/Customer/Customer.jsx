@@ -8,26 +8,26 @@ export const Customer = () => {
   const [money, setMoney] = useState(0);
   const [change, setChange] = useState(0);
 
+  const fetchItem = async () => {
+    const response = await axios.get("/customer/items");
+    console.log("items", response.data.response);
+    setItem(response.data.response);
+  };
+  useEffect(() => {
+    fetchItem();
+  }, []);
+
   const purchaseItem = async (id) => {
     try {
       const response = await axios.post(`/customer/items/${id}/${money}`);
-      console.log(response.data.response);
+      // console.log(response.data.response);
       setChange(response.data.response.change);
+      fetchItem();
     } catch (error) {
       console.log("err", error);
       return Promise.reject(error.response.data.response);
     }
   };
-
-  useEffect(() => {
-    const fetchItem = async () => {
-      const response = await axios.get("/customer/items");
-      console.log("items", response.data.response);
-      setItem(response.data.response);
-    };
-    fetchItem();
-  }, [change]);
-
   const handleClick = (id) => {
     console.log(`clicked item with the id: ${id}`);
     console.log(`User inserted: $${money}`);

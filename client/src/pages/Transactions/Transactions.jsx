@@ -27,20 +27,22 @@ export const Transactions = () => {
       <Heading prompt={"You currently seeing all transactions"} />
       <S.TableDiv>
         <S.Table>
-          <S.THEAD>
+          <S.Thead>
             <tr>
               <th>Item</th>
               <th>Cost</th>
               <th>Purchased</th>
               <th>Date of purchase</th>
             </tr>
-          </S.THEAD>
+          </S.Thead>
           {transactions.map((transaction) => (
             <tr>
-              <td>{transaction.description}</td>
-              <td>{`$${transaction.cost}`}</td>
-              <td>{`$${transaction.amount_inserted}`}</td>
-              <td>{new Date(transaction.transaction_date).toLocaleString()}</td>
+              <S.TdItem>{transaction.description}</S.TdItem>
+              <S.TdCost>{`$${transaction.cost}`}</S.TdCost>
+              <S.TdPurchase>{`$${transaction.amount_inserted}`}</S.TdPurchase>
+              <S.TdDate>
+                {new Date(transaction.transaction_date).toLocaleString()}
+              </S.TdDate>
             </tr>
           ))}
           {/* <tr>

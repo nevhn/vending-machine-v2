@@ -46,4 +46,5 @@ hover:scale-110
 export const Divider = tw.hr`
 text-gray-500
 mt-20
+border-hidden
 `;

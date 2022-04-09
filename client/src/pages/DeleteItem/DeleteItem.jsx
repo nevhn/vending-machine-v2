@@ -79,7 +79,7 @@ export const DeleteItem = () => {
             handleSubmit(e);
           }}
         >
-          <S.InputLabel>Delete item</S.InputLabel>
+          <S.InputLabel>ID *</S.InputLabel>
           <S.Input
             onChange={(e) => setId(e.target.value)}
             placeholder="id"

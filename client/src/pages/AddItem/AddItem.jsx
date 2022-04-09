@@ -51,15 +51,17 @@ export const AddItem = () => {
       <Heading prompt={"You currently adding an item"} />
       <S.InputFieldDiv>
         <S.Form onSubmit={(e) => handleSubmit(e)}>
-          <S.Label>Description</S.Label>
+          <S.Label>Description *</S.Label>
           <S.Input
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Chocolate Chips"
             type="text"
             value={description}
             required
+            pattern="^[a-zA-Z\s]*$"
+            title="Please enter name of item."
           />
-          <S.Label>Cost</S.Label>
+          <S.Label>Cost *</S.Label>
           <S.Input
             onChange={(e) => setCost(e.target.value)}
             type="number"
@@ -70,7 +72,7 @@ export const AddItem = () => {
             step="0.01"
             required
           />
-          <S.Label>Quantity </S.Label>
+          <S.Label>Quantity *</S.Label>
           <S.Input
             onChange={(e) => setQuantity(e.target.value)}
             type="number"

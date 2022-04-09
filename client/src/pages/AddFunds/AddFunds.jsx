@@ -72,16 +72,17 @@ export const AddFunds = () => {
       <S.InputFieldDiv>
         <S.Form onSubmit={(e) => handleSubmit(e)}>
           {/* <Funds /> */}
-          <S.Label>Insert Funds</S.Label>
+          <S.Label>Insert Funds *</S.Label>
           <S.Input
             onChange={(e) => setTotal(e.target.value)}
+            type="number"
             placeholder="$100"
             value={total}
-            type="number"
             autoFocus
-            min="0.01"
             max="10000.00"
+            min="0.01"
             step="0.01"
+            required
           />
           <S.SubmitButton type="submit">Add funds</S.SubmitButton>
         </S.Form>

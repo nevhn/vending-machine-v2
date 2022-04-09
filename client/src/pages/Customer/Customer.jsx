@@ -66,10 +66,10 @@ export const Customer = () => {
       <S.CustomerInputSection>
         <S.Div>
           <S.Span>
-            Money: <S.Amount>{money ? money : "$ 0.00"}</S.Amount>
+            Money: <S.Amount>${money ? money : "0.00"}</S.Amount>
           </S.Span>
           <S.Span>
-            Change: <S.Amount>{change ? change : " $ 0.00"}</S.Amount>
+            Change: <S.Amount>${change ? change : " 0.00"}</S.Amount>
           </S.Span>
         </S.Div>
         <S.InputDiv>

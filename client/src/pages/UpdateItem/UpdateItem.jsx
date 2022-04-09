@@ -79,88 +79,40 @@ export const UpdateItem = () => {
               <S.Th>{item.quantity}</S.Th>
             </S.HeaderTr>
           ))}
-          {/* <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr>
-          <S.HeaderTr>
-            <S.Th>1</S.Th>
-            <S.Th>Pop-Tarts</S.Th>
-          </S.HeaderTr> */}
         </S.Table>
       </S.TableDiv>
       <S.InputDiv>
         <S.Form onSubmit={(e) => handleSubmit(e)}>
-          <S.InputLabel>Update item</S.InputLabel>
+          <S.InputLabel>ID*</S.InputLabel>
           <S.Input
             onChange={(e) => setId(e.target.value)}
             placeholder="id"
-            type={"number"}
+            type="number"
             min="0"
+            required
           ></S.Input>
           <S.InputLabel>Description</S.InputLabel>
           <S.Input
             onChange={(e) => setDescription(e.target.value)}
             placeholder="description"
             type="text"
+            pattern="^[a-zA-Z\s]*$"
           ></S.Input>
           <S.InputLabel>Cost</S.InputLabel>
           <S.Input
             onChange={(e) => setCost(e.target.value)}
-            placeholder="cost"
             type="number"
+            placeholder="cost"
+            max="10000.00"
             min="0"
+            step="0.01"
           ></S.Input>
           <S.InputLabel>Quantity</S.InputLabel>
           <S.Input
             onChange={(e) => setQuantity(e.target.value)}
             placeholder="quantity"
             type="number"
-            min="number"
+            min="1"
           ></S.Input>
           <S.ButtonDiv>
             <S.UpdateButton type="submit">Update</S.UpdateButton>

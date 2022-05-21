@@ -2,25 +2,30 @@ import tw from "tailwind-styled-components";
 
 export const TableDiv = tw.div`
 w-auto
-pl-10
-md:w-96
 m-auto
 mt-11
 mb-9
-max-h-[285px]
 overflow-y-auto
+md:px-0
+md:max-w-2xl
+max-h-[285px]
+
 `;
 
 export const Table = tw.table`
 w-full
+m-auto
 text-center
 border-separate
-p-4
+pl-4
 `;
 
-export const Tr = tw.tr``;
-export const Th = tw.th``;
-export const Td = tw.td``;
+export const Tr = tw.tr`
+`;
+export const Th = tw.th`
+`;
+export const Td = tw.td`
+`;
 export const HeaderTr = tw(Tr)`
 text-gray-400
 `;

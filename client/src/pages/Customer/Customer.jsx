@@ -32,6 +32,19 @@ export const Customer = () => {
     console.log(`clicked item with the id: ${id}`);
     console.log(`User inserted: $${money}`);
 
+    if (!money) {
+      toast("Add enough money first.", {
+        position: "top-center",
+        // style: {
+        //   border: "1px solid #713200",
+        //   padding: "16px",
+        //   color: "#713200",
+        // },
+        icon: "💰",
+      });
+      return;
+    }
+
     const callFunction = purchaseItem(id);
 
     /**Toast */

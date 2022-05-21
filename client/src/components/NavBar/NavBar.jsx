@@ -9,7 +9,8 @@ export const NavBar = () => {
     <S.Nav>
       <S.LeftDiv>
         <Link to="/">
-          <S.HeaderSpan>Vending Machine</S.HeaderSpan>
+          <S.VendingMachineIcon />
+          <S.HeaderSpan> Vending Machine</S.HeaderSpan>
         </Link>
       </S.LeftDiv>
       <S.RightDiv>

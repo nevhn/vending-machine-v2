@@ -15,7 +15,15 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            border: "1px solid #713200",
+            padding: "16px",
+            color: "#713200",
+          },
+        }}
+      />
       <Routes>
         <Route path="/" element={<Customer />} />
         <Route path="vendor" element={<Vendor />} />

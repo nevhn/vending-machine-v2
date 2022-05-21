@@ -10,11 +10,15 @@ mt-[17px]
 ml-[12px]
 cursor-pointer
 pointer-events-auto
-`;
-export const Div = tw.div`
-select-none
+text-ellipsis overflow-scroll ...
 pt-[10px]
 `;
+
+export const Div = tw.div`
+`;
+// select-none
+// pt-[10px]
+// m-auto
 
 export const Quantity = tw.span`
 block
@@ -22,7 +26,8 @@ text-white
 text-center
 pb-[5px]
 `;
-export const Description = tw(Quantity)``;
+export const Description = tw(Quantity)`
+`;
 export const Cost = tw.span`
 block
 text-[#64F58D]

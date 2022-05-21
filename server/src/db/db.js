@@ -6,7 +6,7 @@ const devConfig = {
   // user: "chris",
   // database: "vending_machine_v2_database",
   user: "postgres",
-  password: "postgres",
+  password: "psql2022",
   database: "vending_machine",
   host: "localhost",
   port: "5432",

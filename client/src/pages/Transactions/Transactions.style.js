@@ -3,7 +3,6 @@ export const Container = tw.div`
 `;
 export const TableDiv = tw.div`
 w-auto
-lg:w-96
 m-auto
 mt-11
 mb-9
@@ -11,6 +10,8 @@ px-2
 max-h-[362px]
 overflow-y-auto
 text-center
+lg:px-0
+max-w-6xl
 `;
 // max-w-prose
 // bg-blue-400
@@ -31,6 +32,9 @@ export const TdItem = tw.td`
 text-[#8D8DAA]
 `;
 export const TdCost = tw.td`
+px-1
+py-4
+md:px-9
 
 text-[#8D8DAA]
 `;

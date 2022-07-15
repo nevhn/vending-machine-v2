@@ -1,8 +1,8 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { Heading } from "../../components/Heading/Heading";
 import * as S from "./Items.style";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 export const Items = () => {
   const [items, setItems] = useState([]);
   const fetchItems = async () => {
@@ -19,29 +19,27 @@ export const Items = () => {
   }, []);
 
   return (
-    <>
+    <S.Container>
       <Heading prompt={"You are currently seeing all items"} />
       <S.TableDiv>
         <S.Table>
-          <S.THead>
-            <S.Tr>
+          <S.Thead>
+            <tr>
               <S.Th>Item</S.Th>
               <S.Th>Cost</S.Th>
               <S.Th>Quantity</S.Th>
-            </S.Tr>
-          </S.THead>
-          <S.TBody>
-            {items.map((item) => (
-              <S.TBodyTr>
-                <S.TBodyTd>{item.description}</S.TBodyTd>
-                <S.TBodyTd>{item.cost}</S.TBodyTd>
-                <S.TBodyTd>{item.quantity}</S.TBodyTd>
-              </S.TBodyTr>
-            ))}
-          </S.TBody>
+            </tr>
+          </S.Thead>
+          {items.map((item) => (
+            <tr>
+              <S.TdItem>{item.description}</S.TdItem>
+              <S.TdItem>{item.cost}</S.TdItem>
+              <S.TdItem>{item.quantity}</S.TdItem>
+            </tr>
+          ))}
         </S.Table>
       </S.TableDiv>
       <BackButton />
-    </>
+    </S.Container>
   );
 };

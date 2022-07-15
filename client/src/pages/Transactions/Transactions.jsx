@@ -29,40 +29,22 @@ export const Transactions = () => {
         <S.Table>
           <S.Thead>
             <tr>
-              <th>Item</th>
-              <th>Cost</th>
-              <th>Purchased</th>
-              <th>Date of purchase</th>
+              <S.Th>Item</S.Th>
+              <S.Th>Cost</S.Th>
+              <S.Th>Purchased</S.Th>
+              <S.Th>Date of purchase</S.Th>
             </tr>
           </S.Thead>
           {transactions.map((transaction) => (
             <tr>
               <S.TdItem>{transaction.description}</S.TdItem>
-              <S.TdCost>{`$${transaction.cost}`}</S.TdCost>
-              <S.TdPurchase>{`$${transaction.amount_inserted}`}</S.TdPurchase>
+              <S.TdItem>{`$${transaction.cost}`}</S.TdItem>
+              <S.TdItem>{`$${transaction.amount_inserted}`}</S.TdItem>
               <S.TdDate>
                 {new Date(transaction.transaction_date).toLocaleString()}
               </S.TdDate>
             </tr>
           ))}
-          {/* <tr>
-            <td>Chips</td>
-            <td>$1.00</td>
-            <td>$2.00</td>
-            <td>11/13/1990</td>
-          </tr>
-          <tr>
-            <td>Chips</td>
-            <td>$1.00</td>
-            <td>$2.00</td>
-            <td>11/13/1990</td>
-          </tr>
-          <tr>
-            <td>Chips</td>
-            <td>$1.00</td>
-            <td>$2.00</td>
-            <td>11/13/1990</td>
-          </tr> */}
         </S.Table>
       </S.TableDiv>
       <BackButton />

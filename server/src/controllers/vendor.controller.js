@@ -49,9 +49,15 @@ exports.updateItem = async (req, res) => {
 exports.addFunds = async (req, res) => {
   const { total } = req.body;
   if (!total) throw new Error("Value needs to be higher then zero");
+  /** add current total with new total */
+  const getCurrentTotalQuery = await db.query(
+    "SELECT total from available_money"
+  );
+  const currentTotal = getCurrentTotalQuery.rows[0].total;
+  const newTotal = parseInt(total) + parseInt(currentTotal);
   const updateFundsQuery = await db.query(
     "UPDATE available_money SET total = $1 RETURNING *",
-    [total]
+    [newTotal]
   );
   res.json({ status: "success", response: updateFundsQuery.rows[0] });
 };

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as vendingMachineSVG } from "../../assets/vending-machine.svg";
+import { ReactComponent as vendingMachineSVG } from "../../assets/vending-machine-brand.svg";
 import tw from "tailwind-styled-components";
 
 export const Nav = tw.nav`
@@ -12,8 +12,8 @@ shadow-md
 `;
 
 export const VendingMachineIcon = tw(vendingMachineSVG)`
-w-6
-h-6
+w-12
+h-12
 inline-block
 `;
 

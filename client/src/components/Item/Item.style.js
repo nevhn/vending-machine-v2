@@ -10,7 +10,8 @@ mt-[17px]
 ml-[12px]
 cursor-pointer
 pointer-events-auto
-text-ellipsis overflow-scroll ...
+text-ellipsis 
+overflow-scroll
 pt-[10px]
 `;
 

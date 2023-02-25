@@ -3,14 +3,17 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { Item } from "../../components/Item/Item";
 import * as S from "./Customer.style";
+import endpoint from "../../config";
+
 export const Customer = () => {
   const [items, setItem] = useState([]);
   const [money, setMoney] = useState(0);
   const [change, setChange] = useState(0);
 
   const fetchItem = async () => {
-    const response = await axios.get("/customer/items");
-    console.log("items", response.data.response);
+    // const response = await axios.get("/customer/items");
+    const response = await axios.get(`${endpoint}/customer/items`);
+    // console.log("items", response.data.response);
     setItem(response.data.response);
   };
   useEffect(() => {
@@ -19,7 +22,10 @@ export const Customer = () => {
 
   const purchaseItem = async (id) => {
     try {
-      const response = await axios.post(`/customer/items/${id}/${money}`);
+      // const response = await axios.post(`/customer/items/${id}/${money}`);
+      const response = await axios.post(
+        `${endpoint}/customer/items/${id}/${money}`
+      );
       // console.log(response.data.response);
       setChange(response.data.response.change);
       fetchItem();

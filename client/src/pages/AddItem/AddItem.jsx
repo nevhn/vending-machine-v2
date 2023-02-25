@@ -4,6 +4,7 @@ import * as S from "./AddItem.style";
 import { Heading } from "../../components/Heading/Heading";
 import { BackButton } from "../../components/BackButton/BackButton";
 import toast from "react-hot-toast";
+import endpoint from "../../config";
 
 export const AddItem = () => {
   const [description, setDescription] = useState(null);
@@ -16,8 +17,9 @@ export const AddItem = () => {
       quantity,
     };
     try {
-      const response = await axios.post("/vendor/items", body);
-      console.log(response.data.response);
+      // const response = await axios.post("/vendor/items", body);
+      const response = await axios.post(`${endpoint}/vendor/items`, body);
+      // console.log(response.data.response);
     } catch (error) {
       console.error("err", error);
       return Promise.reject(error.response.data.response);

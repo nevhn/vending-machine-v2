@@ -5,6 +5,7 @@ import { BackButton } from "../../components/BackButton/BackButton";
 import toast from "react-hot-toast";
 import { Funds } from "../Funds/Funds";
 import axios from "axios";
+import endpoint from "../../config";
 
 /**
  *
@@ -18,7 +19,8 @@ export const AddFunds = () => {
 
   const getFunds = async () => {
     try {
-      const response = await axios.get("/vendor/funds");
+      // const response = await axios.get("/vendor/funds");
+      const response = await axios.get(`${endpoint}/vendor/funds`);
       setFunds(response.data.response);
     } catch (error) {
       console.error("err", error);
@@ -34,7 +36,7 @@ export const AddFunds = () => {
       total,
     };
     try {
-      const response = await axios.put("/vendor/funds", body);
+      await axios.put(`${endpoint}/vendor/funds`, body);
       getFunds();
     } catch (error) {
       console.error("err", error);

@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { Heading } from "../../components/Heading/Heading";
 import * as S from "./Funds.style";
+import endpoint from "../../config";
 
 export const Funds = () => {
   const [funds, setFunds] = useState([]);
   const getFunds = async () => {
-    const response = await axios.get("/vendor/funds");
+    // const response = await axios.get("/vendor/funds");
+    const response = await axios.get(`${endpoint}/vendor/funds`);
     setFunds(response.data.response);
   };
   useEffect(() => {

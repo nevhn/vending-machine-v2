@@ -3,11 +3,15 @@ import { Heading } from "../../components/Heading/Heading";
 import * as S from "./Items.style";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+
+import endpoint from "../../config";
+
 export const Items = () => {
   const [items, setItems] = useState([]);
   const fetchItems = async () => {
     try {
-      const response = await axios.get("/customer/items");
+      const response = await axios.get(`${endpoint}/customer/items`);
+
       setItems(response.data.response);
     } catch (error) {
       console.error("err", error);

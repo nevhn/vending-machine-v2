@@ -1,7 +1,7 @@
 // A slightly more cleaner version of:  https://github.com/ExhaustCs/vending-machine
 
 console.clear();
-require("dotenv").config();
+require("dotenv").config("../.env");
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");

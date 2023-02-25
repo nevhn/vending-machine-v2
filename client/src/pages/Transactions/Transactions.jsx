@@ -3,6 +3,7 @@ import * as S from "./Transactions.style";
 import { Heading } from "../../components/Heading/Heading";
 import { BackButton } from "../../components/BackButton/BackButton";
 import axios from "axios";
+import endpoint from "../../config";
 /**
  *
  * TODO:
@@ -15,7 +16,8 @@ import axios from "axios";
 export const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
   const fetchTransactions = async () => {
-    const response = await axios.get("/vendor/transactions");
+    // const response = await axios.get("/vendor/transactions");
+    const response = await axios.get(`${endpoint}/vendor/transactions`);
     setTransactions(response.data.response);
   };
   useEffect(() => {

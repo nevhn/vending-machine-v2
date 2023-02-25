@@ -4,6 +4,7 @@ import { BackButton } from "../../components/BackButton/BackButton";
 import { Heading } from "../../components/Heading/Heading";
 import * as S from "./UpdateItem.style";
 import toast from "react-hot-toast";
+import endpoint from "../../config";
 
 export const UpdateItem = () => {
   /**TODO:
@@ -19,7 +20,8 @@ export const UpdateItem = () => {
   const [quantity, setQuantity] = useState();
 
   const fetchItems = async () => {
-    const response = await axios.get("/customer/items");
+    // const response = await axios.get("/customer/items");
+    const response = await axios.get(`${endpoint}/customer/items`);
     console.log("items", response.data.response);
     setItems(response.data.response);
   };
@@ -35,7 +37,8 @@ export const UpdateItem = () => {
         cost,
         quantity,
       };
-      const response = await axios.put(`/vendor/items/${id}`, body);
+      // const response = await axios.put(`/vendor/items/${id}`, body);
+      const response = await axios.put(`${endpoint}/vendor/items/${id}`, body);
       console.log(response.data.response);
       fetchItems();
     } catch (error) {

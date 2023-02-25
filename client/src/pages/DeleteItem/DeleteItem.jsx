@@ -5,18 +5,15 @@ import * as S from "../UpdateItem/UpdateItem.style";
 import { DeleteButton } from "./DeleteItem.style";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-/**
- *
- * TODO:
- * Start integrating backend into component [x]
- *
- */
+import endpoint from "../../config";
+
 export const DeleteItem = () => {
   const [items, setItems] = useState([]);
   const [id, setId] = useState();
 
   const fetchItems = async () => {
-    const response = await axios.get("/customer/items");
+    // const response = await axios.get("/customer/items");
+    const response = await axios.get(`${endpoint}/customer/items`);
     setItems(response.data.response);
   };
   useEffect(() => {
@@ -25,7 +22,8 @@ export const DeleteItem = () => {
 
   const deleteItem = async (id) => {
     try {
-      const response = await axios.delete(`/vendor/items/${id}`);
+      // const response = await axios.delete(`/vendor/items/${id}`);
+      await axios.delete(`${endpoint}/vendor/items/${id}`);
       fetchItems();
     } catch (error) {
       console.error("err", error);

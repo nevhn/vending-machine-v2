@@ -1,6 +1,7 @@
 # vending-machine-v2
 A simple and interactive CRUD application that mimics the behavior of a vending machine. This application was built as a learning project and serves as an introduction to the PERN stack (PostgreSQL, Express.js, React.js, Node.js).
 
+### [Live Demo](https://vending-machine-v2.vercel.app/)
 
 ## Screenshots
 ![vending-machinev2](https://user-images.githubusercontent.com/51008990/218376919-dc7e0191-b0bb-4b7f-afe8-18a0fc701356.png)

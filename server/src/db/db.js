@@ -13,9 +13,13 @@ const devConfig = {
 
 // console.log(process.env.NODE_ENV);
 
-const pool = new Pool({
-  connectionString: isProduction ? process.env.DATABASE_URL : devConfig,
-});
+const pool = new Pool(
+  isProduction
+    ? {
+        connectionString: process.env.DATABASE_URL,
+      }
+    : devConfig
+);
 
 module.exports = {
   query: (text, params) => pool.query(text, params),

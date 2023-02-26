@@ -3,7 +3,7 @@ const db = require("../db/db");
 /*GET*/
 exports.getTransactions = async (req, res) => {
   const selectAllTransactionsQuery = await db.query(
-    "SELECT * FROM transactions ORDER BY transaction_date DESC"
+    "SELECT * FROM transactions ORDER BY posting_date DESC"
   );
   res.json({
     status: "success",

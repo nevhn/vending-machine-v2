@@ -43,7 +43,7 @@ export const Transactions = () => {
               <S.TdItem>{`$${transaction.cost}`}</S.TdItem>
               <S.TdItem>{`$${transaction.amount_inserted}`}</S.TdItem>
               <S.TdDate>
-                {new Date(transaction.transaction_date).toLocaleString()}
+                {new Date(transaction.posting_date).toLocaleString()}
               </S.TdDate>
             </tr>
           ))}
